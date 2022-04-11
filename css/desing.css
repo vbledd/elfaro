@@ -90,8 +90,8 @@ body{
 /* estilo al pasar el mouse sobre la tabla */
 .section table:hover{
     transform: scale(1.03);
-    background-color: #c9d2d0;
-    color: #31231e;
+    background-color: #000000;
+    color: #ffffff;
 }
 .section table, th, td {
     border-collapse: collapse;

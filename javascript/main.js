@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    console.log('guuncionad')
+    
     $('.ir-arriba').click(function(){
         $('body, html').animate({
             scrollTop: '0px'
