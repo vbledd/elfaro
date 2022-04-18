@@ -63,9 +63,6 @@ function construirNoticias(categoria,titular) {
 
     let noticias = JSON.parse(localStorage.getItem('noticias'));
 
-    $(function() {
-        $("#noticias").append(` <h1 class="titulo">${titular}</h1>`);
-    })
 
     if(categoria == 'inicio'){
         let noticiasTotales = noticias.length;
@@ -103,6 +100,7 @@ function construirNoticias(categoria,titular) {
         
         $(function() {
             $('#noticias').append(`<h3>Cantidad de noticias : ${noticiasMaximas}</h3>`);
+            $("#noticias").append(` <h1 class="titulo">${titular}</h1>`);
         });
     }else{
         let cantidadCategoria = 0;
@@ -133,6 +131,7 @@ function construirNoticias(categoria,titular) {
 
         $(function() {
             $('#noticias').append(`<h3>Cantidad de noticias : ${cantidadCategoria}</h3>`);
+            $("#noticias").append(` <h1 class="titulo">${titular}</h1>`);
         });
     }
     
