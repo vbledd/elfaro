@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Noticia</title>
+    <script src="./javascript/jquery-3.6.0.js"></script>
+    <style>
+
+        /* Importación de font bajada de google fonts  https://fonts.google.com/specimen/Roboto */
+        @font-face {
+            font-family: Roboto;
+            src: url('/fonts/Roboto-Regular.ttf');
+        }
+
+        /* Estilo del body */
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Roboto;
+            background-color:  #f5f5f5;
+        }
+
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .formulario input[type="text"]{
+            width: 400px;
+            padding: 10px;
+        }
+
+        .formulario textarea{
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+        }
+
+        .formulario select{
+            width: 420px;
+            padding: 10px;
+        }
+
+        .agregar{
+            width: 250px;
+            height:40px;
+            font-size:18px;
+            color: #fff;
+            background-color: #00bcd4;
+            border: none;
+            cursor: pointer;
+            transition: 350ms;
+        }
+
+        .agregar:hover{
+            background-color: #007585;
+        }
+    </style>
+</head>
+<body>
+    <div id="formulario" class="formulario">
+        <h1>Agregar Noticia</h1>
+        <label>Nombre de noticia</label>
+        <input type="text" id="nombreNoticia" name="nombreNoticia" placeholder="Nombre de noticia">
+        <label>Categoria</label>
+        <select id="categoria">
+            <option value="" selected="selected">Seleccione</option>
+            <option value="politica">Politica</option>
+            <option value="negocio">Negocio</option>
+            <option value="deportes">Deportes</option>
+        </select>
+        <label>Descripción Noticia</label>
+        <textarea id="descripcionNoticia" name="descripcionNoticia" rows="4" cols="50"></textarea>
+        <button id="agregar" class="agregar" type="button" >Agregar Noticia</button>
+    </div>
+    
+    <script>
+        
+        $("#agregar").on('click', function(){
+            let nombre = $("#nombreNoticia").val();
+            let descripcion = $("#descripcionNoticia").val();
+            let categoria = $("#categoria").val();
+
+            if(!nombre){
+                alert("Debe agregar un nombre de noticia");
+            }else if(!categoria){
+                alert("Debe agregar una categoria");
+            }else if(!descripcion){
+                alert("Debe agregar una descripción de noticia");
+            }else{
+                window.opener.agregarNoticia(nombre, descripcion,categoria);
+            }
+            
+        })
+    </script>
+</body>
+</html>

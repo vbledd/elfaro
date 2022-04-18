@@ -10,12 +10,20 @@
     <!-- Importación archivos javascript-->
     <script src="./javascript/jquery-3.6.0.js"></script>
     <script src="./javascript/main.js"></script>
+
+    <script>
+        construirNoticias('politica','Politica');
+    </script>
 </head>
 <body>
     <!-- Header que contiene el logo y el titulo de la web -->
     <header class="header">
         <img src="./img/logo.png" alt="El Faro Logo">
         <h1>EL FARO NOTICIAS</h1>
+        <div>
+            <span id="hora"></span>
+            <span id="noticiasTotal"></span>
+        </div>
     </header>
     <!-- Funcionalidad volver arriba -->
     <span class="ir-arriba icon-arrow-up2">Subir</span>
@@ -27,90 +35,12 @@
             <li><a href="./negocio.html">Negocio</a></li>
             <li><a href="./deportes.html">Deportes</a></li>
             <li><a href="./politica.html">Politica</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
         </ul>
     </nav>
     
     <!--  Sección que contiene las noticias -->
-    <section class="section">
-        <h1 class="titulo">Politica</h1>
-        <!-- Tabla de noticias -->
-        <table>
-            <tr>
-                <th>
-                    <h1>Presidente Gabriel Boric y Convención Constitucional tendrán documental en Netflix</h1>
-                </th>
-            </tr>
-          
-            <tr>
-                <td>Categoria: Politica</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="./img/politica/imagen1.jpg" width="80%">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Los próximos meses del Gobierno de Gabriel Boric y el desenlace del trabajo de la Convención Constitucional serán registrados en un documental que llegará a Netflix.
-                    La pieza audiovisual estará a cargo del director alemán Daniel Carsenty junto al productor Nick Krüger, en un trabajo que también incluye a Europea TV, el canal franco-alemán ARTE y la plataforma de streaming Netflix.
-                    </p>
-                    <video controls>
-                        <source src="./video/video.mp4" type="video/mp4">
-                        <p>Su navegador no soporta video HTML5. Aquí hay un <a
-                       href="https://www.youtube.com/watch?v=WZjTybyeR-Q&ab_channel=TVU">enlace al video</a>.</p>
-                    </video>
-                </td>
-            </tr>
-        </table>
-        <!-- Tabla de noticias -->
-        <table>
-            <tr>
-                <th>
-                    <h1>Boric pone a Máximo Pacheco a la cabeza de Codelco</h1>
-                </th>
-            </tr>
-            <tr>
-                <td>Categoria: Politica</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="./img/politica/imagen2.jpg" >
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>
-                    El Gobierno designó a Máximo Pacheco Matte, ex ministro de Energía en la segunda administración de Michelle Bachelet, como nuevo presidente del directorio de Codelco.
-                    El empresario y militante socialista tuvo un destacado paso por dicha cartera, con elogios transversales en el mundo político, al punto que su nombre se consideró como parte de los "presidenciables" de la centroizquierda.
-                </p>
-                    </td>
-            </tr>
-        </table>
-        <!-- Tabla de noticias -->
-        <table>
-            <tr>
-                <th>
-                    <h1>Corte de Antofagasta ratificó la solicitud de extradición de Karen Rojo</h1>
-                </th>
-            </tr>
-            <tr>
-                <td>Categoria: Politica</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="./img/politica/imagen3.jpg" >
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>
-                    De manera unánime, la Primera Sala de la Corte de Apelaciones de Antofagasta acogió la solicitud de extradición interpuesta por la Fiscalía en contra de la ex alcaldesa Karen Rojo, que huyó del país al tiempo que se confirmó su condena de cinco años y un día de presidio por el delito de fraude al Fisco.
-                    Después de que el Juzgado de Garantía de la ciudad acogiera la petición ayer martes, restaba la ratificación del tribunal de alzada para que el Ministerio de Relaciones Exteriores reciba, junto con una copia del fallo, un documento que le solicite practicar las gestiones diplomáticas necesarias para que el Reino de los Países Bajos detenga a la ex autoridad, pues se estima que es allí donde se encuentra desde la semana pasada.
-                </p>                    
-                    </td>
-            </tr>
-        </table>
-    </section>
+    <section id="noticias"  class="section"></section>
     <!-- Footer de la pagina -->
     <footer class="footer">
         <span>©2022 Taller de Aplicaciones de Internet PRO301-9002-2022</span>

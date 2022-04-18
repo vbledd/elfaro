@@ -10,12 +10,20 @@
     <!-- Importación archivos javascript-->
     <script src="./javascript/jquery-3.6.0.js"></script>
     <script src="./javascript/main.js"></script>
+
+    <script>
+        construirNoticias('deportes','Deportes');
+    </script>
 </head>
 <body>
     <!-- Header que contiene el logo y el titulo de la web -->
     <header class="header">
         <img src="./img/logo.png" alt="El Faro Logo">
         <h1>EL FARO NOTICIAS</h1>
+        <div>
+            <span id="hora"></span>
+            <span id="noticiasTotal"></span>
+        </div>
     </header>
     <!-- Funcionalidad volver arriba -->
     <span class="ir-arriba icon-arrow-up2">Subir</span>
@@ -27,69 +35,12 @@
             <li><a href="./negocio.html">Negocio</a></li>
             <li><a href="./deportes.html">Deportes</a></li>
             <li><a href="./politica.html">Politica</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
         </ul>
     </nav>
     
     <!--  Sección que contiene las noticias -->
-    <section class="section">
-        <h1 class="titulo">Deportes</h1>
-        <!-- Tabla de noticias -->
-        <table>
-            <tr>
-                <th><h1>Suárez y eventual adiós de la Generación Dorada: "El público debe agradecerles, han hecho historia"</h1></th>
-            </tr>
-          
-            <tr>
-                <td>Categoria: Deportes</td>
-            </tr>
-            <tr>
-                <td><img src="./img/deportes/Imagen1.jpg" width="80%"></td>
-            </tr>
-            <tr>
-                <td><p>Pese a ser el autor de uno de los dos goles con que Uruguay derrotó a la Selección Chilena en San Carlos de Apoquindo, Luis Suárez lamentó que la Generación Dorada vuelva a quedarse fuera de un Mundial y señaló que, de igual forma, "el pueblo chileno debe estar agradecido".</p></td>
-            </tr>
-        </table>
-        <!-- Tabla de noticias -->
-        <table>
-            <tr>
-                <th><h1>El clásico universitario se lleva todas las miradas: así se jugará la 8va fecha del torneo nacional</h1></th>
-            </tr>
-          
-            <tr>
-                <td>Categoria: Deportes</td>
-            </tr>
-            <tr>
-                <td><img src="./img/deportes/Imagen2.png" ></td>
-            </tr>
-            <tr>
-                <td><p>
-                    La ANFP reveló la programación de la octava fecha del Campeonato Nacional 2022, donde destaca el clásico universitario entre la UC y la ‘U’ en el Estadio San Carlos de Apoquindo.
-                    El duelo más atractivo de la fecha se jugará en la precordillera el sábado 2 de abril desde las 18:00 horas.
-                </p>
-                    </td>
-            </tr>
-        </table>
-        <!-- Tabla de noticias -->
-        <table>
-            <tr>
-                <th><h1>No lo dudaron: el candidato ideal de Beausejour y Pinilla para asumir como técnico de La Roja</h1></th>
-            </tr>
-          
-            <tr>
-                <td>Categoria: Deportes</td>
-            </tr>
-            <tr>
-                <td><img src="./img/deportes/Imagen3.jpg" ></td>
-            </tr>
-            <tr>
-                <td><p>
-                    Tras la no clasificación de La Roja al Mundial de Catar 2022, ya comienzan a circular nombres del posible reemplazante de Martín Lasarte en la banca del ‘equipo de todos’.
-                    En medio de este reciente debate dos exseleccionados no lo dudaron y nombraron al que ellos creen como el candidato idóneo para asumir.
-                </p>                    
-                    </td>
-            </tr>
-        </table>
-    </section>
+    <section id="noticias" class="section"></section>
     <!-- Footer de la pagina -->
     <footer class="footer">
         <span>©2022 Taller de Aplicaciones de Internet PRO301-9002-2022</span>
