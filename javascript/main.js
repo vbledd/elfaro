@@ -60,22 +60,24 @@ if(localStorage.getItem('noticias') === null){
 }
 
 function construirNoticias(categoria,titular) {
-
+    //obtenemos las noticias guardadas en el localStorage
     let noticias = JSON.parse(localStorage.getItem('noticias'));
 
-
+    // comprobamos si la categoria es inicio para mostrar
+    // 3 noticias aleatorias
     if(categoria == 'inicio'){
         let noticiasTotales = noticias.length;
         let indiceAleatorio = [];
         let noticiasMaximas = 3;
-
+        // utilizamos un for con una comporbación para obtener 3 numeros
+        // aleatorios que no se repitan
         for(let i = 0; i < noticiasMaximas; i++){
             let indice = Math.floor(Math.random() * noticiasTotales);
             indiceAleatorio.find( numero => numero == indice) ? i-- : indiceAleatorio.push(indice);
         }
-        
+        // recorremos las noticias con los indices aleatorios
         indiceAleatorio.map(indice =>{
-            
+            // generamos la estructura donde se rellenan los datos
             let estructura = `
             <table>
                 <tr>
@@ -93,17 +95,20 @@ function construirNoticias(categoria,titular) {
             </table>`;
 
             $(function() {
+                // agregamos la noticia al elemento con la ID noticias
                 $('#noticias').append(estructura);
             });
             
         })
         
         $(function() {
+            // agregamos la cantidad de noticias asi como tambien el h1 de la pagina
             $('#noticias').append(`<h3>Cantidad de noticias : ${noticiasMaximas}</h3>`);
             $("#noticias").append(` <h1 class="titulo">${titular}</h1>`);
         });
     }else{
         let cantidadCategoria = 0;
+        // recorremos las noticias y las agregamos al html
         noticias.map(articulo =>{
             if(articulo.categoria == categoria){
                 cantidadCategoria++;
