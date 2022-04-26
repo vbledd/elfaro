@@ -10,6 +10,10 @@ body{
     margin: 0;
     font-family: Roboto;
     background-color:  #f5f5f5;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
 }
 /* Estilo del header que contiene el logo y el titulo de la pagina */
 .header{
@@ -41,7 +45,7 @@ body{
 /*estilo del menu*/
 .nav{
     width: 100%;
-    height: 40px;
+    height: auto;
     background-color: #B80000;
     display: flex;
     flex-direction:column;
@@ -49,23 +53,33 @@ body{
     justify-content: center;
     border-top: 1px solid #fff;
     margin-bottom: 50px;
+    padding: 0;
 }
 
 .nav ul{
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap:10px;
 }
 
 .nav ul li{
     list-style: none;
+    height: 40px;
+    overflow: hidden;
+    margin-bottom:-13px;
 }
 /* estilo de los links del menu*/
 .nav ul li a{
     
+    height: 50px;
     display:block;
-    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
     color: white;
     transition: background-color 500ms;
+    margin-top:10px;
+    padding-bottom: 5px;
     
 }
 /* estilo que se aplica al pasar el mouse sobre el menu */
@@ -130,17 +144,46 @@ body{
     box-sizing: border-box;
     padding: 10px;
     font-size: 14px;
+    width : 100%;
+}
+
+.footer2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.footer2 span{
+    text-align: center;
+}
+
+.footer2 .fdiv1{
+    grid-area: 1 / 1 / 2 / 2;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer2 .fdiv2{
+    grid-area: 1 / 2 / 2 / 3;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .ir-arriba {
-	display:none;
+    display: none;
 	padding:20px;
 	background:#024959;
 	font-size:20px;
 	color:#fff;
 	cursor:pointer;
 	position: fixed;
-	bottom:20px;
-	right:20px;
+	bottom: 10px;
+    right: 10px;
+    z-index: 99;
 }
 
 /* estilo formulario contacto */
@@ -169,4 +212,19 @@ body{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.avisos{
+    width: 95%;
+    background-color: #5e0592;
+    color: #fff;
+    font-size:25px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 60px;
+    border-radius: 5px;
 }
