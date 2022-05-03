@@ -190,7 +190,7 @@ function abrirVentana(){
 }
 
 // funcion para agregar noticias
-function agregarNoticia(nombre,descripcion,categoria){
+/* function agregarNoticia(nombre,descripcion,categoria){
     console.log('datos', nombre, descripcion,categoria);
 
     let noticias = JSON.parse(localStorage.getItem('noticias'));
@@ -211,3 +211,4 @@ function clearNoticias() {
     localStorage.removeItem('noticias');
     location.reload();
 }
+ */

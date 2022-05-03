@@ -14,6 +14,11 @@ use App\Http\Controllers\NoticiasController;
 */
 
 Route::get('/', [NoticiasController::class, 'index']);
+
+
+Route::post('/noticia/agregar', [NoticiasController::class, 'add'])->name('addNoticia');
+
+
 Route::get('/agregarNoticia', function(){
     return view('agregarNoticia');
 });

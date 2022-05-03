@@ -19,50 +19,45 @@
     </style>
 </head>
 <body>
-    <form class="d-flex flex-column bd-highlight mb-3" style="width: 90%;">
+    <form id="formularioADD" method="post" action="{{route('addNoticia')}}" dataclass="d-flex flex-column bd-highlight mb-3" style="width: 90%;" enctype="multipart/form-data" >
         <h1>Agregar Noticia</h1>
-        
-        
+
+
         <div class="mb-3">
             <label class="form-label">Nombre de noticia</label>
-            <input type="text" class="form-control" id="nombreNoticia" name="nombreNoticia" placeholder="Nombre de noticia">
+            <input type="text" class="form-control" id="nombreNoticia" name="nombreNoticia" placeholder="Nombre de noticia" required>
         </div>
         <div class="mb-3">
             <label class="form-label">Categoria</label>
-            <select class="form-select" id="categoria">
+            <select class="form-select" id="categoria" name="categoria" required>
                 <option value="" selected="selected">Seleccione</option>
-                <option value="politica">Politica</option>
-                <option value="negocio">Negocio</option>
-                <option value="deportes">Deportes</option>
+
+                <?php
+                    use \App\Http\Controllers\TemplateController;
+                    $categorias = TemplateController::getCategorias();
+                    foreach ($categorias  as $listado){
+                        echo "<option value='{$listado->id}'>{$listado->nombre}</option>";
+                    }
+                ?>
             </select>
         </div>
 
+
+
         <div class="form-floating" style="margin-bottom: 15px;">
-            <textarea class="form-control" id="descripcionNoticia" name="descripcionNoticia" rows="4" cols="50"></textarea>
+            <textarea class="form-control" id="descripcionNoticia" name="descripcionNoticia" rows="10" cols="50" required></textarea>
             <label for="floatingTextarea">Descripción Noticia</label>
         </div>
-        
-        <button id="agregar"  class="btn btn-primary" type="button" >Agregar Noticia</button>
-    </form>
-    
-    <script>
-        
-        $("#agregar").on('click', function(){
-            let nombre = $("#nombreNoticia").val();
-            let descripcion = $("#descripcionNoticia").val();
-            let categoria = $("#categoria").val();
 
-            if(!nombre){
-                alert("Debe agregar un nombre de noticia");
-            }else if(!categoria){
-                alert("Debe agregar una categoria");
-            }else if(!descripcion){
-                alert("Debe agregar una descripción de noticia");
-            }else{
-                window.opener.agregarNoticia(nombre, descripcion,categoria);
-            }
-            
-        })
-    </script>
+        <div class="mb-3">
+            <label class="form-label">Agregar Imagen</label>
+            <input type="file" class="form-control" id="imagen" name="imagen" accept="image/png, image/jpeg">
+        </div>
+
+
+
+        <button id="agregar"  class="btn btn-primary" type="submit" >Agregar Noticia</button>
+    </form>
+
 </body>
 </html>
