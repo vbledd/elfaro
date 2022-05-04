@@ -91,7 +91,6 @@ body{
 /* estilo de la seccion utilizando flex column para ordenar los elementos hacia abajo */
 .section{
     width: 80%;
-    margin-left: 10%;
     display:flex;
     justify-content:center;
     align-items: center;
