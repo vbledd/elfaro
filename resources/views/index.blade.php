@@ -15,7 +15,7 @@
             @endif
 
         >
-            <img src="/elfaro/public/img/{{ $listado->imagen}}" class="card-img-top" alt="...">
+            <img src="{{$url_base}}/img/{{ $listado->imagen}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">
                     @if ($listado->estado == 1)

@@ -15,6 +15,11 @@ use App\Http\Controllers\UsuarioController;
 |
 */
 
+/* Route::get('/', function () {
+    return view('welcome');
+});
+ */
+
 Route::get('/', [NoticiasController::class, 'index']);
 Route::get('/categorias/{id}', [NoticiasController::class, 'noticias']);
 Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto');
@@ -29,3 +34,4 @@ Route::post('/noticia/agregar', [NoticiasController::class, 'add'])->name('addNo
 Route::get('/agregarNoticia', function(){
     return view('agregarNoticia');
 });
+

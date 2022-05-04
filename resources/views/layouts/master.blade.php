@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<?php
+    use \App\Http\Controllers\TemplateController;
+    $url_base = 'http://taller.papeleriadyg.com'
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Faro @yield('titulo')</title>
     <!-- Importación del archivo css que contiene los estilos de la web -->
-    <link href="/elfaro/public/css/desing.css" rel="stylesheet" type="text/css"/>
+    <link href="{{$url_base}}/public/css/desing.css" rel="stylesheet" type="text/css"/>
     <!-- Importacion BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Importación archivos javascript-->
-    <script src="/elfaro/public/javascript/jquery-3.6.0.js"></script>
-    <script src="/elfaro/public/javascript/main.js"></script>
-    <?php
-        use \App\Http\Controllers\TemplateController;
-    ?>
+    <script src="{{$url_base}}/javascript/jquery-3.6.0.js"></script>
+    <script src="{{$url_base}}/javascript/main.js"></script>
+
 </head>
 <body>
     <!-- Header que contiene el logo y el titulo de la web -->
     <header class="header">
-        <img src="/elfaro/public/img/logo.png" alt="El Faro Logo">
+        <img src="{{$url_base}}/img/logo.png" alt="El Faro Logo">
 
         <div>
             <span id="hora"></span>
@@ -33,16 +36,16 @@
     <!-- nav que contiene el menu de navegacion del sitio  -->
     <nav class="nav">
         <ul>
-            <li><a href="/elfaro/public/">Inicio</a></li>
+            <li><a href="{{$url_base}}">Inicio</a></li>
             <?php
                 $categorias = TemplateController::getCategorias();
                 foreach ($categorias  as $listado){
                     $id = $listado['id'];
                     $nombre = $listado['nombre'];
-                    echo "<li><a href='/elfaro/public/categorias/{$listado->id}'>{$listado->nombre}</a></li>";
+                    echo "<li><a href='{{$url_base}}/categorias/{$listado->id}'>{$listado->nombre}</a></li>";
                 }
             ?>
-            <li><a href="/elfaro/public/contacto">Contacto</a></li>
+            <li><a href="{{$url_base}}/contacto">Contacto</a></li>
             <li><a href="{{route('registro')}}">Registro</a></li>
             <li><a href="javascript:void(0);" onclick="abrirVentana()">Agregar Noticia</a></li>
         </ul>

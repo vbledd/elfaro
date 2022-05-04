@@ -1,0 +1,17 @@
+[03-May-2022 20:34:49 America/Chicago] PHP Warning:  require(/home/papeleri/taller/public/taller/vendor/autoload.php): failed to open stream: No such file or directory in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:34:49 America/Chicago] PHP Fatal error:  require(): Failed opening required '/home/papeleri/taller/public/taller/vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:34:52 America/Chicago] PHP Warning:  require(/home/papeleri/taller/public/taller/vendor/autoload.php): failed to open stream: No such file or directory in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:34:52 America/Chicago] PHP Fatal error:  require(): Failed opening required '/home/papeleri/taller/public/taller/vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:36:01 America/Chicago] PHP Warning:  require(/home/papeleri/taller/public/taller/vendor/autoload.php): failed to open stream: No such file or directory in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:36:01 America/Chicago] PHP Fatal error:  require(): Failed opening required '/home/papeleri/taller/public/taller/vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:36:03 America/Chicago] PHP Warning:  require(/home/papeleri/taller/public/taller/vendor/autoload.php): failed to open stream: No such file or directory in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:36:03 America/Chicago] PHP Fatal error:  require(): Failed opening required '/home/papeleri/taller/public/taller/vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:36:42 America/Chicago] PHP Warning:  require(/home/papeleri/taller/public/taller/vendor/autoload.php): failed to open stream: No such file or directory in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:36:42 America/Chicago] PHP Fatal error:  require(): Failed opening required '/home/papeleri/taller/public/taller/vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:36:56 America/Chicago] PHP Warning:  require(/home/papeleri/taller/public/taller/vendor/autoload.php): failed to open stream: No such file or directory in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:36:56 America/Chicago] PHP Fatal error:  require(): Failed opening required '/home/papeleri/taller/public/taller/vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:37:09 America/Chicago] PHP Warning:  require(/home/papeleri/taller/public/taller/vendor/autoload.php): Failed to open stream: No such file or directory in /home/papeleri/taller/public/index.php on line 34
+[03-May-2022 20:37:09 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home/papeleri/taller/public/taller/vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/papeleri/taller/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/papeleri/taller/public/index.php on line 34
