@@ -236,6 +236,7 @@ body{
     font-size:25px;
     padding:10px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .mensajeError{
@@ -245,4 +246,11 @@ body{
     font-size:25px;
     padding:10px;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1300px) {
+    .card {
+        width: 50% !important;
+    }
 }
