@@ -1,4 +1,4 @@
-let baseURL = '/elfaro/public';
+let baseURL = 'https://taller.papeleriadyg.com';
 
 let noticiasBase = [
     {
