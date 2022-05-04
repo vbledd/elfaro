@@ -29,7 +29,7 @@ body{
 /*estilo del titulo de la pagina */
 .header h1{
     color: white;
-    
+
 }
 /*estilo que controla la anchura y la altura del logo */
 .header img{
@@ -71,7 +71,7 @@ body{
 }
 /* estilo de los links del menu*/
 .nav ul li a{
-    
+
     height: 50px;
     display:block;
     padding-right: 10px;
@@ -80,7 +80,7 @@ body{
     transition: background-color 500ms;
     margin-top:10px;
     padding-bottom: 5px;
-    
+
 }
 /* estilo que se aplica al pasar el mouse sobre el menu */
 .nav ul li a:hover{
@@ -105,7 +105,7 @@ body{
     border-radius: 10px;
     transition : transform 400ms;
     background-color: #fff;
-    
+
 }
 /* estilo al pasar el mouse sobre la tabla */
 .section table:hover{
@@ -227,4 +227,22 @@ body{
     margin-bottom: 10px;
     height: 60px;
     border-radius: 5px;
+}
+
+.mensajeSuccess{
+    width: 90%;
+    background-color: #02c081;
+    color: #fff;
+    font-size:25px;
+    padding:10px;
+    text-align: center;
+}
+
+.mensajeError{
+    width: 90%;
+    background-color: #c40041;
+    color: #fff;
+    font-size:25px;
+    padding:10px;
+    text-align: center;
 }

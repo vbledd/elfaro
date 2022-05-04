@@ -14,6 +14,12 @@ class NoticiasController extends Controller
         //return ('hola');
         return view('index', ["noticias"=>$noticias]);
     }
+    public function noticias($id){
+        $noticias = noticias::where('id_categoria',$id)->get();
+        $count = $noticias->count();
+        //return ('hola');
+        return view('index', ["noticias"=>$noticias, "cantidadNoticias"=>$count]);
+    }
 
     public function add(Request $request){
 

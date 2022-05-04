@@ -1,8 +1,9 @@
 @extends('layouts.master')
 
-@section('titulo', 'Miguelo')
+@section('titulo', 'Noticias')
 
 @section('contenido')
+
 
     @foreach ($noticias as $listado)
 
@@ -14,7 +15,7 @@
             @endif
 
         >
-            <img src="./img/{{ $listado->imagen}}" class="card-img-top" alt="...">
+            <img src="/elfaro/public/img/{{ $listado->imagen}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">
                     @if ($listado->estado == 1)
@@ -29,5 +30,8 @@
             </div>
         </div>
     @endforeach
+    @isset($cantidadNoticias)
+    <h3>Cantidad de noticias : {{$cantidadNoticias}}</h3>
+    @endisset
 
 @stop
