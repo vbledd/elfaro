@@ -10,8 +10,6 @@
         <div class="card mb-3"
             @if ($listado->estado == 1)
             style="width: 90%; border: 1px solid #F39B00"
-            @else
-                style="width: 80%;"
             @endif
 
         >
