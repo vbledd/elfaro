@@ -8,10 +8,11 @@ use App\Models\Usuario;
 
 class UsuarioController extends Controller
 {
+    // este método se ejecuta cuando se accede a la ruta /usuario
     public function registro(){
         return view('registro');
     }
-
+    // este método se ejecuta cuando se accede a la ruta /usuario/nuevo
     public function saveUsuario(Request $request){
 
         try {
@@ -34,9 +35,6 @@ class UsuarioController extends Controller
 
             return view('registro', ["mensaje"=>$mensaje]);
         };
-
-
-
 
     }
 }

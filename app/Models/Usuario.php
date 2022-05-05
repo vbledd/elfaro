@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Usuario extends Model
 {
     use HasFactory;
+    // este modelo utiliza la siguiente tabla de la BD
     protected $table = 'usuario';
 }

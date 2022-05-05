@@ -8,19 +8,21 @@ use Illuminate\Support\Facades\Storage;
 
 class NoticiasController extends Controller
 {
+    // este método se ejecuta cuando se accede a la ruta /
     public function index()
     {
         $noticias = noticias::all()->take(5);
         //return ('hola');
         return view('index', ["noticias"=>$noticias]);
     }
+    // este método se ejecuta cuando se accede a la ruta /categorias/{id}
     public function noticias($id){
         $noticias = noticias::where('id_categoria',$id)->get();
         $count = $noticias->count();
         //return ('hola');
         return view('index', ["noticias"=>$noticias, "cantidadNoticias"=>$count]);
     }
-
+    // este método se ejecuta cuando se accede a la ruta /agregarNoticia
     public function add(Request $request){
 
         $nombreImagen = 'none.jpg';
