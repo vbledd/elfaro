@@ -3,13 +3,10 @@
 
 <?php
     use \App\Http\Controllers\TemplateController;
-    $url = TemplateController::getUrl();
+    $develop = true;
+    $url = ($develop == true) ? 'http://localhost/elfaro/public' : 'https://taller.papeleriadyg.com';
 
 ?>
-
-<script>
-    let baseURL = "<?=$url?>";
-</script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

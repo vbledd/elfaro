@@ -5,7 +5,6 @@
 @section('contenido')
 
     <?php
-        use \App\Http\Controllers\TemplateController;
         $url = TemplateController::getUrl();
     ?>
     @foreach ($noticias as $listado)

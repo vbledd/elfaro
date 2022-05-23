@@ -3,13 +3,10 @@
 
 <?php
     use \App\Http\Controllers\TemplateController;
-    $url = TemplateController::getUrl();
+    $develop = true;
+    $url = ($develop == true) ? 'http://localhost/elfaro/public' : 'https://taller.papeleriadyg.com';
 
 ?>
-
-<script>
-    let baseURL = "<?=$url?>";
-</script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,16 +38,16 @@
     <!-- nav que contiene el menu de navegacion del sitio  -->
     <nav class="nav">
         <ul>
-            <li><a href="<?=$url?>/">Inicio</a></li>
+            <li><a href="/">Inicio</a></li>
             <?php
                 $categorias = TemplateController::getCategorias();
                 foreach ($categorias  as $listado){
                     $id = $listado['id'];
                     $nombre = $listado['nombre'];
-                    echo "<li><a href='{$url}/categorias/{$listado->id}'>{$listado->nombre}</a></li>";
+                    echo "<li><a href='/categorias/{$listado->id}'>{$listado->nombre}</a></li>";
                 }
             ?>
-            <li><a href="<?=$url?>/contacto">Contacto</a></li>
+            <li><a href="/contacto">Contacto</a></li>
             <li><a href="{{route('registro')}}">Registro</a></li>
             <li><a href="javascript:void(0);" onclick="abrirVentana()">Agregar Noticia</a></li>
         </ul>

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master', ['miguel' => $data])
 
 @section('titulo', 'Noticias')
 
@@ -7,6 +7,8 @@
     <?php
         use \App\Http\Controllers\TemplateController;
         $url = TemplateController::getUrl();
+
+        echo $data;
     ?>
     @foreach ($noticias as $listado)
 

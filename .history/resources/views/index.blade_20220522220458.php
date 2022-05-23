@@ -1,13 +1,10 @@
-@extends('layouts.master')
+@extends('layouts.master',['url' => $url])
 
 @section('titulo', 'Noticias')
 
 @section('contenido')
 
-    <?php
-        use \App\Http\Controllers\TemplateController;
-        $url = TemplateController::getUrl();
-    ?>
+
     @foreach ($noticias as $listado)
 
         <div class="card mb-3"

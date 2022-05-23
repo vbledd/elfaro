@@ -1,4 +1,4 @@
-
+let baseURL = 'https://taller.papeleriadyg.com';
 
 let noticiasBase = [
     {

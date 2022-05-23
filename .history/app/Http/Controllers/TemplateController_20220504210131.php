@@ -21,11 +21,4 @@ class TemplateController extends Controller
         $count = Noticias::all()->count();
         return $count;
     }
-
-    public static function getURL(){
-        $develop = true;
-        $url = ($develop == true) ? 'http://localhost/elfaro/public' : 'https://taller.papeleriadyg.com';
-
-        return $url;
-    }
 }

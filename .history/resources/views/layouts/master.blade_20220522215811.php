@@ -3,13 +3,10 @@
 
 <?php
     use \App\Http\Controllers\TemplateController;
-    $url = TemplateController::getUrl();
+    $develop = true;
+    $url = ($develop == true) ? 'http://localhost/elfaro/public' : 'https://taller.papeleriadyg.com';
 
 ?>
-
-<script>
-    let baseURL = "<?=$url?>";
-</script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,7 +44,7 @@
                 foreach ($categorias  as $listado){
                     $id = $listado['id'];
                     $nombre = $listado['nombre'];
-                    echo "<li><a href='{$url}/categorias/{$listado->id}'>{$listado->nombre}</a></li>";
+                    echo "<li><a href='/categorias/{$listado->id}'>{$listado->nombre}</a></li>";
                 }
             ?>
             <li><a href="<?=$url?>/contacto">Contacto</a></li>

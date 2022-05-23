@@ -4,10 +4,7 @@
 
 @section('contenido')
 
-    <?php
-        use \App\Http\Controllers\TemplateController;
-        $url = TemplateController::getUrl();
-    ?>
+
     @foreach ($noticias as $listado)
 
         <div class="card mb-3"

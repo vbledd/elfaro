@@ -4,6 +4,7 @@
 <?php
     use \App\Http\Controllers\TemplateController;
     $url = TemplateController::getUrl();
+    $miguel = "miguel salinas"
 
 ?>
 

@@ -3,13 +3,10 @@
 
 <?php
     use \App\Http\Controllers\TemplateController;
-    $url = TemplateController::getUrl();
+    $develop = true;
+    $url = ($develop == true) ? 'http://localhost/elfaro/public' : 'https://taller.papeleriadyg.com';
 
 ?>
-
-<script>
-    let baseURL = "<?=$url?>";
-</script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,7 +48,7 @@
                 }
             ?>
             <li><a href="<?=$url?>/contacto">Contacto</a></li>
-            <li><a href="{{route('registro')}}">Registro</a></li>
+            <li><a href="<?=$url?>/agregarNoticia">Registro</a></li>
             <li><a href="javascript:void(0);" onclick="abrirVentana()">Agregar Noticia</a></li>
         </ul>
     </nav>

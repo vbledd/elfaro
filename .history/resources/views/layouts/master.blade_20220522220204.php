@@ -3,12 +3,14 @@
 
 <?php
     use \App\Http\Controllers\TemplateController;
-    $url = TemplateController::getUrl();
+    $develop = false;
+    $url = ($develop == true) ? 'http://localhost/elfaro/public' : 'https://taller.papeleriadyg.com';
 
 ?>
 
 <script>
-    let baseURL = "<?=$url?>";
+    let develop = "<?= $develop ?>";
+    let baseURL = develop ? "http://localhost/elfaro/public" : "https://taller.papeleriadyg.com";
 </script>
 <head>
     <meta charset="UTF-8">

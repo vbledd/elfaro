@@ -5,7 +5,6 @@
 @section('contenido')
 
     <?php
-        use \App\Http\Controllers\TemplateController;
         $url = TemplateController::getUrl();
     ?>
     @foreach ($noticias as $listado)
@@ -16,7 +15,7 @@
             @endif
 
         >
-            <img src="{{$url}}/img/{{ $listado->imagen}}" class="card-img-top" alt="...">
+            <img src="/img/{{ $listado->imagen}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">
                     @if ($listado->estado == 1)

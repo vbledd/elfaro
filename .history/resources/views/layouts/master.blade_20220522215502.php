@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <?php
     use \App\Http\Controllers\TemplateController;
-    $url = TemplateController::getUrl();
-
+    $develop = true
+    if($develop){
+        $url ="http://localhost/elfaro/public";
+    }else{
+        $url ="https://taller.papeleriadyg.com";
+    }
 ?>
-
-<script>
-    let baseURL = "<?=$url?>";
-</script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Faro @yield('titulo')</title>
     <!-- Importación del archivo css que contiene los estilos de la web -->
-    <link href="<?=$url?>/css/desing.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/desing.css" rel="stylesheet" type="text/css"/>
     <!-- Importacion BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Importación archivos javascript-->
-    <script src="<?=$url?>/javascript/jquery-3.6.0.js"></script>
-    <script src="<?=$url?>/javascript/main.js"></script>
+    <script src="/javascript/jquery-3.6.0.js"></script>
+    <script src="/javascript/main.js"></script>
 
 </head>
 <body>
@@ -41,16 +41,16 @@
     <!-- nav que contiene el menu de navegacion del sitio  -->
     <nav class="nav">
         <ul>
-            <li><a href="<?=$url?>/">Inicio</a></li>
+            <li><a href="/">Inicio</a></li>
             <?php
                 $categorias = TemplateController::getCategorias();
                 foreach ($categorias  as $listado){
                     $id = $listado['id'];
                     $nombre = $listado['nombre'];
-                    echo "<li><a href='{$url}/categorias/{$listado->id}'>{$listado->nombre}</a></li>";
+                    echo "<li><a href='/categorias/{$listado->id}'>{$listado->nombre}</a></li>";
                 }
             ?>
-            <li><a href="<?=$url?>/contacto">Contacto</a></li>
+            <li><a href="/contacto">Contacto</a></li>
             <li><a href="{{route('registro')}}">Registro</a></li>
             <li><a href="javascript:void(0);" onclick="abrirVentana()">Agregar Noticia</a></li>
         </ul>
