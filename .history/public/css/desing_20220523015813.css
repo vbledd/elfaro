@@ -1,0 +1,524 @@
+/* Importación de font bajada de google fonts  https://fonts.google.com/specimen/Roboto */
+@font-face {
+    font-family: Roboto;
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+/* Estilo del body */
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+    background-color:  #EEEEEE !important;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+/* Estilo del header que contiene el logo y el titulo de la pagina */
+.header{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: transparent;
+}
+
+.header .topHeader{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+    flex-direction: row;
+    background-color: #B51C28;
+    color: #fff;
+}
+
+.header .topHeader .topHeader-date{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    height: 100%;
+    align-items: center;
+}
+
+.header .topHeader #fechaHora{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    background-color: #fff;
+    color: #B51C28;
+    border-radius: 2px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.header .topHeader .topHeader-social{
+    color: #fff;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.midHeader{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 180px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.midHeader-left{
+
+}
+
+.midHeader-left > img{
+    width: 300px;
+    height: auto;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+
+    /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.midHeader-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: #000000 0px 0px 5px;
+}
+
+/*estilo del menu*/
+.nav{
+    width: 100%;
+    height: 50px;
+    background-color: #B51C28;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 20px !important;
+    padding-left: 5% !important;
+    padding-right: 5%;
+    box-sizing: border-box;
+}
+
+.nav ul{
+    display:flex;
+    flex-direction: row;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:10px;
+    padding: 0;
+}
+
+.nav ul li{
+    list-style: none;
+    padding: 0;
+}
+/* estilo de los links del menu*/
+.nav ul li a{
+    width: fit-content;
+    height: 50px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background-color 500ms;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 600;
+    text-decoration: none;
+
+
+}
+/* estilo que se aplica al pasar el mouse sobre el menu */
+.nav ul li a:hover{
+    background-color: #6e0303;
+}
+
+.news{
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.newsTittle{
+    background-color: #B51C28;
+    width: 250px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding-left: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.newsNews{
+    font-size: 16px;
+    color: #B51C28;
+}
+
+/* estilo de la seccion utilizando flex column para ordenar los elementos hacia abajo */
+.section{
+    width: 90%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+/* estilo general de la tabla que contiene la noticia */
+.section table{
+    width: 80%;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition : transform 400ms;
+    background-color: #fff;
+
+}
+/* estilo al pasar el mouse sobre la tabla */
+.section table:hover{
+    transform: scale(1.03);
+    background-color: #000000;
+    color: #ffffff;
+}
+.section table, th, td {
+    border-collapse: collapse;
+    text-align: center;
+}
+/* estilo de las imagenes de la tabla */
+.section table td img{
+    width : 100%;
+}
+
+.section table td p{
+    width : 80%;
+    margin-left: 10%;
+    text-align: justify;
+}
+/* estilo de la tabla que apunta al video*/
+.section table td video{
+    width : 80%;
+    max-width: 700px;
+}
+/* estilo del footer de la web */
+.footer{
+    background-color: #c9d2d0;
+    color: #31231e;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap : 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+    width : 100%;
+}
+
+.footer2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.footer2 span{
+    text-align: center;
+}
+
+.footer2 .fdiv1{
+    grid-area: 1 / 1 / 2 / 2;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer2 .fdiv2{
+    grid-area: 1 / 2 / 2 / 3;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ir-arriba {
+    display: none;
+	padding:20px;
+	background:#024959;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom: 10px;
+    right: 10px;
+    z-index: 99;
+}
+
+/* estilo formulario contacto */
+.formularioContacto{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+.formularioContacto input[type="text"], input[type="email"]{
+    padding: 10px;
+}
+
+.formularioContacto textarea{
+    padding: 10px;
+}
+
+.formularioContacto input[type="submit"]{
+    padding: 10px;
+    background-color: #001b94;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.avisos{
+    width: 95%;
+    background-color: #5e0592;
+    color: #fff;
+    font-size:25px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.mensajeSuccess{
+    width: 90%;
+    background-color: #02c081;
+    color: #fff;
+    font-size:25px;
+    padding:10px;
+    text-align: center;
+}
+
+.mensajeError{
+    width: 90%;
+    background-color: #c40041;
+    color: #fff;
+    font-size:25px;
+    padding:10px;
+    text-align: center;
+}
+
+
+
+.slick-prev{
+    z-index: 9999 !important;
+}
+
+.slick-prev::before{
+    color : #fff !important;
+    left: 0px;
+    margin-right: -80px;
+
+}
+
+.slick-next::before{
+    color : #fff !important;
+    left: 0px;
+    margin-left: -80px;
+
+}
+
+
+
+.topContainerIndex{
+    width: 100%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+
+.newsSlider{
+    margin-left: -10vh;
+    width: 45%;
+    height: 400px;
+    padding: 0px;
+
+
+
+}
+
+.mainSlider{
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.sliderContent{
+
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 69%);
+
+}
+
+.sliderContent h1{
+    position: relative;
+    bottom: 10px;
+    font-size: 30px;
+    height: fit-content;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+
+}
+
+.newsGrid{
+    width: 58%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.newsGridImg{
+    width: 48%;
+    background-color: orange;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 300ms;
+}
+
+.newsGridImg:hover{
+    transform: scale(1.03);
+}
+
+.sliderContent2{
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 69%);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sliderContent2 h1{
+    font-size: 14px;
+    color: #fff;
+}
+
+
+
+.cardNotice{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.cardNotice img{
+    width: 50%;
+    height: auto;
+}
+
+.cardNoticeContent{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cardNoticeContentCategoria{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardNoticeContentCategoria span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #B51C28;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px
+    font-size: 11px;
+}
+
+.cardNoticeContentTitulo{
+
+}
+
+.cardNoticeContentDescripcion{
+
+}
