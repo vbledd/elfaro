@@ -50,11 +50,7 @@
             <input type="password" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña">
             <button type="button" id="btnLogin" class="btn btn-primary">Ingresar</button>
         </form>
-
-        <button type="button" onclick="loginMenu()" class="closeLogin"><i class="fa-solid fa-circle-xmark"></i> Cerrar Ventana</button>
     </div>
-
-
 
     <!-- Header que contiene el logo y el titulo de la web -->
     <header class="header">

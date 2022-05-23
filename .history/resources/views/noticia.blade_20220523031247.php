@@ -36,12 +36,12 @@
         <div class="listadoComentarios">
             <div class="comentarioCard">
                 <img src="<?=$url?>/img/noneUser.png">
-                <p>este es un comentario lorepasdal dskaldkaldaldaldlak sdkasldladadas dadadlasdada dadasdasa asdada asdad ad</p>
+                <p>este es un comentario lorepasdaldskaldkaldaldaldlaksdkasldladadasdadadlasdadadadasdasa asdada asdad ad</p>
             </div>
 
             <div class="comentarioCard">
                 <img src="<?=$url?>/img/noneUser.png">
-                <p>este es un comentario lorepasdal dskaldkaldaldaldlak sdkasldladadas dadadlasdada dadasdasa asdada asdad ad</p>
+                <p>este es un comentario lorepasdaldskaldkaldaldaldlaksdkasldladadasdadadlasdadadadasdasa</p>
             </div>
         </div>
     </div>

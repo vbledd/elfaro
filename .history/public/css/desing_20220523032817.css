@@ -690,17 +690,6 @@ body{
 
 }
 
-.closeLogin{
-    border: 0;
-    background-color: #6d0c14;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px;
-}
-.closeLogin:hover{
-    background-color: #b51c28;
-}
-
 .comentarioCard{
     display: flex;
     height: fit-content;
@@ -736,7 +725,7 @@ body{
     -webkit-box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.59);
     box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.59);
     top: 0;
-    right: -100%;
+    right: 0;
     z-index: 999999;
 
     display: flex;
@@ -744,11 +733,8 @@ body{
     padding: 10px;
     gap: 10px;
     box-sizing: border-box;
-    transition: 300ms;
 
 }
-
-
 
 .login h1{
     display: block;
@@ -761,10 +747,12 @@ body{
 
 
 
+
+
 .login form{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     box-sizing: border-box;
 }
 
@@ -773,7 +761,6 @@ body{
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    color: #0b4bac;
 }
 
 @media only screen and (max-width: 450px) {
@@ -835,8 +822,5 @@ body{
         font-size: 18px;
     }
 
-    .login{
-        width: 90%;
-    }
 
 }

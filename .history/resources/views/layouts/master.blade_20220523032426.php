@@ -39,22 +39,10 @@
 </head>
 <body>
 
-    <div id="login" class="login">
+    <div class="login">
         <h1>Login</h1>
         <h3>Ingrese sus credenciales</h3>
-
-        <form>
-            <label>Usuario</label>
-            <input type="text" name="usuario" id="usuario" placeholder="Ingrese su usuario">
-            <label>Contraseña</label>
-            <input type="password" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña">
-            <button type="button" id="btnLogin" class="btn btn-primary">Ingresar</button>
-        </form>
-
-        <button type="button" onclick="loginMenu()" class="closeLogin"><i class="fa-solid fa-circle-xmark"></i> Cerrar Ventana</button>
     </div>
-
-
 
     <!-- Header que contiene el logo y el titulo de la web -->
     <header class="header">
@@ -105,7 +93,7 @@
             <li><a href="{{route('registro')}}">Registro</a></li>
             <li><a href="javascript:void(0);" onclick="abrirVentana()">Agregar Noticia</a></li>
 
-            <li><a href="javascript:void(0);" onclick="loginMenu()">Login</a></li>
+            <li><a href="{{route('registro')}}">Login</a></li>
             <li><a href="{{route('registro')}}">Salir</a></li>
         </ul>
     </nav>

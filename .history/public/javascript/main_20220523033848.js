@@ -61,7 +61,7 @@ function abrirVentana(){
     agregar = window.open(`${baseURL}/agregarNoticia`, '_blank','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
 }
 
-globalThis.loginStatus = true;
+let loginStatus = false;
 
 function loginMenu(){
     console.log('login');

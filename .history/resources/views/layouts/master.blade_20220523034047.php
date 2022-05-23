@@ -39,7 +39,7 @@
 </head>
 <body>
 
-    <div id="login" class="login">
+    <div id="login" class="login" style="right: -100%">
         <h1>Login</h1>
         <h3>Ingrese sus credenciales</h3>
 
@@ -51,7 +51,7 @@
             <button type="button" id="btnLogin" class="btn btn-primary">Ingresar</button>
         </form>
 
-        <button type="button" onclick="loginMenu()" class="closeLogin"><i class="fa-solid fa-circle-xmark"></i> Cerrar Ventana</button>
+        <button type="button"><i class="fa-solid fa-octagon-xmark"></i> Cerrar Ventana</button>
     </div>
 
 

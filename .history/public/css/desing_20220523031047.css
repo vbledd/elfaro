@@ -242,8 +242,8 @@ body{
 }
 /* estilo del footer de la web */
 .footer{
-    background-color: #292929;
-    color: #f7f7f7;
+    background-color: #c9d2d0;
+    color: #31231e;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -253,7 +253,6 @@ body{
     padding: 10px;
     font-size: 14px;
     width : 100%;
-    margin-top: 40px;
 }
 
 .footer2{
@@ -690,17 +689,6 @@ body{
 
 }
 
-.closeLogin{
-    border: 0;
-    background-color: #6d0c14;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px;
-}
-.closeLogin:hover{
-    background-color: #b51c28;
-}
-
 .comentarioCard{
     display: flex;
     height: fit-content;
@@ -722,60 +710,9 @@ body{
 }
 
 .comentarioCard p{
-    height: fit-content;
     margin-top: 10px;
-    text-align: left;
 
 }
-
-.login{
-    width: 40%;
-    height: 100vh;
-    position: fixed;
-    background-color: #fff;
-    -webkit-box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.59);
-    box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.59);
-    top: 0;
-    right: -100%;
-    z-index: 999999;
-
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-    box-sizing: border-box;
-    transition: 300ms;
-
-}
-
-
-
-.login h1{
-    display: block;
-    padding: 10px;
-    background-color: #0b4bac;
-    color: #fff;
-    text-align: center;
-    border-radius: 10px;
-}
-
-
-
-.login form{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    box-sizing: border-box;
-}
-
-.login form input{
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: #0b4bac;
-}
-
 @media only screen and (max-width: 450px) {
 
     .midHeader{
@@ -835,8 +772,5 @@ body{
         font-size: 18px;
     }
 
-    .login{
-        width: 90%;
-    }
 
 }

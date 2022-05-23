@@ -696,10 +696,9 @@ body{
     color: #fff;
     cursor: pointer;
     padding: 10px;
+
 }
-.closeLogin:hover{
-    background-color: #b51c28;
-}
+
 
 .comentarioCard{
     display: flex;
@@ -835,8 +834,5 @@ body{
         font-size: 18px;
     }
 
-    .login{
-        width: 90%;
-    }
 
 }
