@@ -7,8 +7,6 @@
     <?php
         use \App\Http\Controllers\TemplateController;
         $url = TemplateController::getUrl();
-
-        session_start();
     ?>
 
     <div class="mainNotice">
@@ -29,18 +27,11 @@
 
 
     <div class="mainNoticeComentarios">
-
-        @if(empty($_SESSION["login"]))
-        <div class="noComentario">Debes estar logeado para poder comentar</div>
-        @else
-        <form class="formComentario" action="{{$url}}/noticia/addComentario" method="post">
-            <input type="hidden" name="idNoticia" value="{{$noticia->id}}">
+        <form class="formComentario">
             <label>Nuevo Comentario: </label>
             <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Comentario..."></textarea>
-            <button  id="btnComentario" class="btn btn-primary">Comentar</button>
+            <button type="button" id="btnComentario" class="btn btn-primary">Comentar</button>
         </form>
-        @endif
-
 
         <div class="listadoComentarios">
 

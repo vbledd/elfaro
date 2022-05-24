@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuario;
-use App\Models\Noticias;
 
 
 class UsuarioController extends Controller
@@ -37,35 +36,5 @@ class UsuarioController extends Controller
             return view('registro', ["mensaje"=>$mensaje]);
         };
 
-    }
-
-    public function login(Request $request){
-        $user = $request->input('user');
-        $password = $request->input('password');
-        $usuario = Usuario::where('nombre', $user)->where('password', $password)->get();
-        $noticias = noticias::all()->take(4);
-
-        if(count($usuario) > 0){
-            $mensaje = (object)[];
-            $mensaje->mensaje = "Bienvenido";
-            $mensaje->status = 'success';
-
-            session_start();
-            $_SESSION["login"]= $user;
-            $_SESSION["userID"] = $usuario[0]->id;
-            return view('index', ["noticias"=>$noticias, "inicio" => 0,"mensaje"=>$mensaje]);
-        }else{
-            $mensaje = (object)[];
-            $mensaje->mensaje = "Usuario o contraseña incorrectos";
-            $mensaje->status = 'error';
-            return view('index', ["noticias"=>$noticias, "inicio" => 0,"mensaje"=>$mensaje]);
-        }
-
-    }
-
-    public function logout(){
-        session_start();
-        session_destroy();
-        return redirect('/');
     }
 }

@@ -14,14 +14,11 @@ Route::get('/noticia/{id}', [NoticiasController::class, 'open_noticia']);
 Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto');
 Route::post('/contacto/nuevo', [ContactoController::class, 'saveContacto'])->name('contacto-nuevo');
 
-Route::post('/login', [UsuarioController::class, 'login'])->name('login');
-Route::get('/logout', [UsuarioController::class, 'logout'])->name('logout');
+Route::get('/login', [UsuarioController::class, 'login'])->name('login');
 Route::get('/registro', [UsuarioController::class, 'registro'])->name('registro');
 Route::post('/registro/nuevo', [UsuarioController::class, 'saveUsuario'])->name('usuario-nuevo');
 
 Route::post('/noticia/agregar', [NoticiasController::class, 'add'])->name('addNoticia');
-
-Route::post('/noticia/addComentario', [NoticiasController::class, 'addComentario'])->name('addComentario');
 
 
 Route::get('/agregarNoticia', function(){

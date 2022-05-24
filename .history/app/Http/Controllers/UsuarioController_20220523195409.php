@@ -52,7 +52,6 @@ class UsuarioController extends Controller
 
             session_start();
             $_SESSION["login"]= $user;
-            $_SESSION["userID"] = $usuario[0]->id;
             return view('index', ["noticias"=>$noticias, "inicio" => 0,"mensaje"=>$mensaje]);
         }else{
             $mensaje = (object)[];

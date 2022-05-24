@@ -21,8 +21,6 @@ Route::post('/registro/nuevo', [UsuarioController::class, 'saveUsuario'])->name(
 
 Route::post('/noticia/agregar', [NoticiasController::class, 'add'])->name('addNoticia');
 
-Route::post('/noticia/addComentario', [NoticiasController::class, 'addComentario'])->name('addComentario');
-
 
 Route::get('/agregarNoticia', function(){
     return view('agregarNoticia');

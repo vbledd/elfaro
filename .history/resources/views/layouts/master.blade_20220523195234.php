@@ -120,7 +120,7 @@ if(!empty($mensaje)){
             <li><a href="javascript:void(0);" onclick="loginMenu()">Login</a></li>
             <li><a href="{{route('registro')}}">Registro</a></li>
             @else
-            <li><a href="{{route('logout')}}">Cerrar Sesión</a></li>
+            <li><a href="{{route('registro')}}">Cerrar Sesión</a></li>
             @endif
         </ul>
     </nav>
@@ -136,7 +136,17 @@ if(!empty($mensaje)){
         #Contenedor de avisos
     </div>
 
-
+    @isset($mensaje)
+        @if($mensaje->status == 'success')
+            <div class="mensajeSuccess">
+                {{$mensaje->mensaje}}
+            </div>
+        @else
+            <div class="mensajeError">
+                {{$mensaje->mensaje}}
+            </div>
+        @endif
+    @endisset
     <!--  Sección que contiene las noticias -->
     <section id="noticias"  class="section">
         @yield('contenido')

@@ -42,17 +42,15 @@ class UsuarioController extends Controller
     public function login(Request $request){
         $user = $request->input('user');
         $password = $request->input('password');
-        $usuario = Usuario::where('nombre', $user)->where('password', $password)->get();
+
+        $usuario = Usuario::where('email', $user)->where('password', $password)->get();
         $noticias = noticias::all()->take(4);
+
 
         if(count($usuario) > 0){
             $mensaje = (object)[];
             $mensaje->mensaje = "Bienvenido";
             $mensaje->status = 'success';
-
-            session_start();
-            $_SESSION["login"]= $user;
-            $_SESSION["userID"] = $usuario[0]->id;
             return view('index', ["noticias"=>$noticias, "inicio" => 0,"mensaje"=>$mensaje]);
         }else{
             $mensaje = (object)[];
@@ -61,11 +59,5 @@ class UsuarioController extends Controller
             return view('index', ["noticias"=>$noticias, "inicio" => 0,"mensaje"=>$mensaje]);
         }
 
-    }
-
-    public function logout(){
-        session_start();
-        session_destroy();
-        return redirect('/');
     }
 }

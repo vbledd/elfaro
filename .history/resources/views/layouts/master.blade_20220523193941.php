@@ -2,8 +2,13 @@
 <html lang="es">
 
 <?php
+
+    session_start();
     use \App\Http\Controllers\TemplateController;
     $url = TemplateController::getUrl();
+
+
+
 ?>
 
 <script>
@@ -39,9 +44,13 @@
 <?php
 
 if(!empty($mensaje)){
-    if($mensaje->status == 'error'){
+    if($mensaje->status == 'success'){
         echo '<script>
-            alert("Error de login")
+            console.log("LOGIN OK")
+        </script>';
+    }else{
+        echo '<script>
+            console.log("ERROR LOGIN")
         </script>';
     }
 }
@@ -114,14 +123,11 @@ if(!empty($mensaje)){
                 }
             ?>
             <li><a href="<?=$url?>/contacto">Contacto</a></li>
-
-            <li><a href="javascript:void(0);" onclick="abrirVentana()">Agregar Noticia</a></li>
-            @if(empty($_SESSION["login"]))
-            <li><a href="javascript:void(0);" onclick="loginMenu()">Login</a></li>
             <li><a href="{{route('registro')}}">Registro</a></li>
-            @else
-            <li><a href="{{route('logout')}}">Cerrar Sesión</a></li>
-            @endif
+            <li><a href="javascript:void(0);" onclick="abrirVentana()">Agregar Noticia</a></li>
+
+            <li><a href="javascript:void(0);" onclick="loginMenu()">Login</a></li>
+            <li><a href="{{route('registro')}}">Salir</a></li>
         </ul>
     </nav>
     <div class="news">
@@ -136,7 +142,17 @@ if(!empty($mensaje)){
         #Contenedor de avisos
     </div>
 
-
+    @isset($mensaje)
+        @if($mensaje->status == 'success')
+            <div class="mensajeSuccess">
+                {{$mensaje->mensaje}}
+            </div>
+        @else
+            <div class="mensajeError">
+                {{$mensaje->mensaje}}
+            </div>
+        @endif
+    @endisset
     <!--  Sección que contiene las noticias -->
     <section id="noticias"  class="section">
         @yield('contenido')

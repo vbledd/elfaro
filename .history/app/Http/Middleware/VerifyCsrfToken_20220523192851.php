@@ -15,7 +15,6 @@ class VerifyCsrfToken extends Middleware
         '/noticia/agregar',
         '/contacto/nuevo',
         '/registro/nuevo',
-        '/login',
-        '/noticia/addComentario',
+        '/login'
     ];
 }

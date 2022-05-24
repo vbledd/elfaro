@@ -14,8 +14,6 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         '/noticia/agregar',
         '/contacto/nuevo',
-        '/registro/nuevo',
-        '/login',
-        '/noticia/addComentario',
+        '/registro/nuevo'
     ];
 }

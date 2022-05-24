@@ -57,14 +57,12 @@ class NoticiasController extends Controller
     }
 
     public function addComentario(Request $request){
-
-        session_start();
         $comentario = new Comentario;
         $comentario->id_noticia = $request->input('idNoticia');
         $comentario->id_usuario = $_SESSION["userID"];
         $comentario->comentario = $request->input('comentario');
         $comentario->save();
 
-        return redirect('/noticia/'.$request->input('idNoticia'));
+        return ('Comentario agregado Correctamente');
     }
 }

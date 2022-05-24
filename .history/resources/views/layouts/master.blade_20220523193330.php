@@ -2,8 +2,13 @@
 <html lang="es">
 
 <?php
+
+    session_start();
     use \App\Http\Controllers\TemplateController;
     $url = TemplateController::getUrl();
+
+
+
 ?>
 
 <script>
@@ -35,18 +40,32 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-
 <?php
-
+$msj = $mensaje;
 if(!empty($mensaje)){
-    if($mensaje->status == 'error'){
-        echo '<script>
-            alert("Error de login")
-        </script>';
-    }
+        echo `<script>
+            Toastify({
+  text: "This is a toast",
+  duration: 3000,
+  destination: "https://github.com/apvarun/toastify-js",
+  newWindow: true,
+  close: true,
+  gravity: "top",
+  position: "left",
+  stopOnFocus: true, // Prevents dismissing of toast on hover
+  style: {
+    background: "linear-gradient(to right, #00b09b, #96c93d)",
+  },
+  onClick: function(){} // Callback after click
+}).showToast();
+            </script>`;
 }
 
 ?>
+
+<script>
+    console.warn("<?=$mensaje->mensaje?>");
+</script>
 
 </head>
 <body>
@@ -114,14 +133,11 @@ if(!empty($mensaje)){
                 }
             ?>
             <li><a href="<?=$url?>/contacto">Contacto</a></li>
-
-            <li><a href="javascript:void(0);" onclick="abrirVentana()">Agregar Noticia</a></li>
-            @if(empty($_SESSION["login"]))
-            <li><a href="javascript:void(0);" onclick="loginMenu()">Login</a></li>
             <li><a href="{{route('registro')}}">Registro</a></li>
-            @else
-            <li><a href="{{route('logout')}}">Cerrar Sesión</a></li>
-            @endif
+            <li><a href="javascript:void(0);" onclick="abrirVentana()">Agregar Noticia</a></li>
+
+            <li><a href="javascript:void(0);" onclick="loginMenu()">Login</a></li>
+            <li><a href="{{route('registro')}}">Salir</a></li>
         </ul>
     </nav>
     <div class="news">
@@ -136,7 +152,17 @@ if(!empty($mensaje)){
         #Contenedor de avisos
     </div>
 
-
+    @isset($mensaje)
+        @if($mensaje->status == 'success')
+            <div class="mensajeSuccess">
+                {{$mensaje->mensaje}}
+            </div>
+        @else
+            <div class="mensajeError">
+                {{$mensaje->mensaje}}
+            </div>
+        @endif
+    @endisset
     <!--  Sección que contiene las noticias -->
     <section id="noticias"  class="section">
         @yield('contenido')

@@ -34,7 +34,6 @@
         <div class="noComentario">Debes estar logeado para poder comentar</div>
         @else
         <form class="formComentario" action="{{$url}}/noticia/addComentario" method="post">
-            <input type="hidden" name="idNoticia" value="{{$noticia->id}}">
             <label>Nuevo Comentario: </label>
             <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Comentario..."></textarea>
             <button  id="btnComentario" class="btn btn-primary">Comentar</button>
