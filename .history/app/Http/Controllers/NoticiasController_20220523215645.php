@@ -12,15 +12,13 @@ class NoticiasController extends Controller
     // este método se ejecuta cuando se accede a la ruta /
     public function index()
     {
-        $noticias = noticias::orderBy('created_at', 'desc')->get()->take(4);
-        //var_dump($noticias);
-
+        $noticias = noticias::orderBy('id', 'desc')->get();
         //return ('hola');
         return view('index', ["noticias"=>$noticias, "inicio" => 0]);
     }
     // este método se ejecuta cuando se accede a la ruta /categorias/{id}
     public function noticias($id){
-        $noticias = noticias::where('id_categoria',$id)->orderBy('created_at', 'desc')->get();
+        $noticias = noticias::where('id_categoria',$id)->get();
         $count = $noticias->count();
         //return ('hola');
         return view('index', ["noticias"=>$noticias, "cantidadNoticias"=>$count]);
