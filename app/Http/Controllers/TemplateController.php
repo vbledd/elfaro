@@ -23,7 +23,7 @@ class TemplateController extends Controller
     }
 
     public static function getURL(){
-        $develop = true;
+        $develop = false;
         $url = ($develop == true) ? 'http://localhost/elfaro/public' : 'https://taller.papeleriadyg.com';
 
         return $url;
