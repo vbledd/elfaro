@@ -117,12 +117,11 @@ if(!empty($mensaje)){
             ?>
             <li><a href="<?=$url?>/contacto">Contacto</a></li>
 
-
+            <li><a href="javascript:void(0);" onclick="abrirVentana()">Agregar Noticia</a></li>
             @if(empty($_SESSION["login"]))
             <li><a href="javascript:void(0);" onclick="loginMenu()">Login</a></li>
             <li><a href="{{route('registro')}}">Registro</a></li>
             @else
-            <li><a href="javascript:void(0);" onclick="abrirVentana()">Agregar Noticia</a></li>
             <li><a href="{{route('logout')}}">Cerrar Sesión</a></li>
             @endif
         </ul>
